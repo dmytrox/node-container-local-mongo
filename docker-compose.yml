@@ -1,0 +1,10 @@
+services: 
+ node:
+    container_name: node
+    restart: always
+    build: ./app
+    image: node
+    volumes:
+      - ./app:/code
+    ports:
+      - "3000:3000"
